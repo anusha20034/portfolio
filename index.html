@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anusha Jain | Aerospace Systems & Control</title>
+<meta name="description" content="Anusha Jain — MSc Aerospace Engineering, Systems & Control. Flight Control, Guidance & Navigation, Aerospace Software.">
+<style>
+:root{
+  --ink:#10243e;
+  --ink-2:#203a5c;
+  --accent:#2b6f9e;
+  --accent-light:#eaf3f8;
+  --paper:#ffffff;
+  --bg:#f5f7fa;
+  --line:#dce4eb;
+  --muted:#667085;
+  --soft:#eef2f6;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:#25364a;
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  line-height:1.65;
+}
+a{color:inherit}
+.container{width:min(1120px,90%);margin:auto}
+nav{
+  position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);
+  backdrop-filter:blur(12px);border-bottom:1px solid var(--line)
+}
+.nav-inner{height:68px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-size:14px;font-weight:800;letter-spacing:.12em;color:var(--ink)}
+.nav-links{display:flex;gap:26px;font-size:13px;color:#53657a}
+.nav-links a{text-decoration:none}
+.nav-links a:hover{color:var(--accent)}
+.hero{
+  background:linear-gradient(135deg,#fff 0%,#f7fafc 65%,#edf4f8 100%);
+  border-bottom:1px solid var(--line)
+}
+.hero-inner{padding:96px 0 88px;display:grid;grid-template-columns:1.55fr .85fr;gap:72px;align-items:center}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;color:var(--accent);
+  font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase
+}
+.eyebrow:before{content:"";width:28px;height:1px;background:var(--accent)}
+h1{
+  margin:16px 0 12px;color:var(--ink);font-size:clamp(48px,7vw,76px);
+  line-height:.98;letter-spacing:-.045em;font-weight:800
+}
+.role{font-size:22px;color:var(--ink-2);font-weight:500;margin:0 0 22px}
+.hero-copy{font-size:17px;max-width:690px;color:#526274;margin:0}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:44px;padding:0 18px;border-radius:7px;text-decoration:none;
+  font-size:13px;font-weight:750;border:1px solid var(--ink);transition:.18s ease
+}
+.btn.primary{background:var(--ink);color:#fff}
+.btn.secondary{background:#fff;color:var(--ink);border-color:#c9d3dd}
+.btn:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(16,36,62,.10)}
+.profile-card{
+  background:var(--ink);color:#fff;border-radius:14px;padding:30px;
+  box-shadow:0 18px 45px rgba(16,36,62,.14)
+}
+.profile-photo{
+  width:150px;height:150px;object-fit:cover;object-position:50% 50%;
+  border-radius:50%;display:block;margin:0 auto 24px;
+  border:4px solid rgba(255,255,255,.9);
+  box-shadow:0 8px 24px rgba(0,0,0,.18)
+}
+.profile-card .small{
+  text-transform:uppercase;letter-spacing:.12em;font-size:11px;font-weight:800;
+  color:#a9c7dc;margin-bottom:17px
+}
+.profile-card h2{font-size:25px;line-height:1.25;margin:0 0 20px}
+.profile-row{
+  border-top:1px solid rgba(255,255,255,.14);padding:13px 0;
+  font-size:14px;color:#d9e5ee
+}
+.profile-row strong{display:block;color:#fff;font-size:12px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px}
+section{padding:82px 0}
+.section-head{margin-bottom:34px}
+.section-label{font-size:11px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--accent)}
+h2.section-title{font-size:34px;letter-spacing:-.025em;color:var(--ink);margin:8px 0 7px}
+.section-intro{margin:0;color:var(--muted);max-width:700px}
+.about-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:24px}
+.panel{
+  background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:30px
+}
+.panel p{margin:0;color:#526274}
+.skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.skill{
+  background:var(--accent-light);color:#275675;border-radius:5px;
+  padding:7px 10px;font-size:12px;font-weight:700
+}
+.timeline{display:grid;gap:14px}
+.timeline-card{
+  background:#fff;border:1px solid var(--line);border-radius:11px;
+  padding:25px 27px;display:grid;grid-template-columns:190px 1fr;gap:28px
+}
+.date{font-size:12px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
+.location{font-size:12px;color:var(--muted);margin-top:4px}
+.timeline-card h3{margin:0;color:var(--ink);font-size:18px}
+.timeline-card .sub{font-size:13px;color:#53657a;font-weight:650;margin:3px 0 10px}
+.timeline-card p{margin:0;color:#526274;font-size:14px}
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.project{
+  background:#fff;border:1px solid var(--line);border-radius:11px;padding:25px;
+  transition:.18s ease
+}
+.project:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(16,36,62,.07)}
+.project h3{margin:0 0 7px;color:var(--ink);font-size:17px;line-height:1.35}
+.project .meta{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);font-weight:800;margin-bottom:12px}
+.project p{margin:0;color:#596a7c;font-size:13.5px}
+.cv-section{background:#edf3f7;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cv-box{
+  background:var(--ink);border-radius:14px;padding:42px;
+  display:flex;justify-content:space-between;align-items:center;gap:30px
+}
+.cv-box h2{margin:0 0 7px;color:#fff;font-size:31px}
+.cv-box p{margin:0;color:#cbd9e4}
+.cv-box .btn.secondary{background:transparent;color:#fff;border-color:#71879d}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.contact-card{
+  background:#fff;border:1px solid var(--line);border-radius:11px;padding:25px
+}
+.contact-card strong{display:block;color:var(--ink);font-size:12px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px}
+.contact-card a{text-decoration:none;color:#416b89}
+footer{padding:28px 0;background:#0a192b;color:#aebdca;font-size:12px}
+footer .footer-inner{display:flex;justify-content:space-between;gap:20px}
+footer a{color:#fff;text-decoration:none}
+@media(max-width:800px){
+  .hero-inner,.about-grid{grid-template-columns:1fr}
+  .hero-inner{padding:68px 0}
+  .project-grid{grid-template-columns:1fr}
+  .timeline-card{grid-template-columns:1fr;gap:8px}
+  .cv-box{display:block;padding:30px}
+  .cv-box .actions{margin-top:22px}
+}
+@media(max-width:620px){
+  .nav-links{display:none}
+  section{padding:60px 0}
+  h2.section-title{font-size:29px}
+  .contact-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <div class="brand">ANUSHA JAIN</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#cv">CV</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-inner">
+    <div>
+      <div class="eyebrow">Aerospace Engineering · Systems & Control</div>
+      <h1>Anusha Jain</h1>
+      <p class="role">Flight Control · Guidance & Navigation · Aerospace Software</p>
+      <p class="hero-copy">
+        Final-year MSc student at ISAE-SUPAERO seeking a 6-month end-of-studies
+        internship from April 2027, with a focus on flight control, guidance
+        and navigation, and software integration for autonomous and reliable
+        aerospace systems.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="Anusha_Jain_CV_EN.pdf" target="_blank">View English CV ↗</a>
+        <a class="btn secondary" href="Anusha_Jain_CV_FR.pdf" target="_blank">Voir le CV français ↗</a>
+        <a class="btn secondary" href="https://www.linkedin.com/in/jainanusha/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+
+    <aside class="profile-card">
+      <img class="profile-photo" src="anusha-jain-profile.jpg" alt="Anusha Jain">
+      <div class="small">Current profile</div>
+      <h2>MSc Aerospace Engineering<br>Systems & Control</h2>
+      <div class="profile-row"><strong>Institution</strong>ISAE-SUPAERO</div>
+      <div class="profile-row"><strong>Location</strong>Toulouse, France</div>
+      <div class="profile-row"><strong>Availability</strong>6-month internship · April 2027</div>
+      <div class="profile-row"><strong>Focus</strong>Flight control · GNC · Aerospace software</div>
+    </aside>
+  </div>
+</header>
+
+<section id="about">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">01 · Profile</div>
+      <h2 class="section-title">Engineering with a systems perspective</h2>
+      <p class="section-intro">A concise overview of my technical focus and the tools I use.</p>
+    </div>
+    <div class="about-grid">
+      <div class="panel">
+        <p>
+          Anusha is driven by the challenge of bridging aerospace and rapidly evolving
+          software technologies to develop autonomous, integrated and reliable systems.
+          She approaches complex problems with curiosity, persistence and a strong willingness to learn.
+        </p>
+        <p style="margin-top:16px;">
+          She enjoys exploring new technologies and taking on challenging problems that
+          push her technical boundaries. She also values collaboration and diverse perspectives,
+          with experience both contributing to and leading multidisciplinary teams through
+          projects such as AIESEC and the Airbus Fly Your Ideas Challenge.
+        </p>
+      </div>
+      <div class="panel">
+        <div class="section-label">Core capabilities</div>
+        <div class="skills">
+          <span class="skill">Flight Dynamics</span><span class="skill">Flight Control</span>
+          <span class="skill">Guidance & Navigation</span><span class="skill">Adaptive Control</span>
+          <span class="skill">PID / MRAC</span><span class="skill">6-DOF Dynamics</span>
+          <span class="skill">Python</span><span class="skill">MATLAB / Simulink</span>
+          <span class="skill">ROS / Gazebo</span><span class="skill">Machine Learning</span>
+          <span class="skill">Systems Engineering</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">02 · Experience</div>
+      <h2 class="section-title">Experience & research</h2>
+      <p class="section-intro">Selected professional and research experience.</p>
+    </div>
+    <div class="timeline">
+      <article class="timeline-card">
+        <div><div class="date">Feb 2026 – Present</div><div class="location">Toulouse, France</div></div>
+        <div>
+          <h3>ISAE-SUPAERO — Graduate Student</h3>
+          <div class="sub">Researcher · Glider Control & Reinforcement Learning</div>
+          <p>Developing a 6DOF glider simulator in MATLAB/Simulink with atmospheric turbulence models and designing an adaptive RL controller benchmarked against a PID baseline.</p>
+        </div>
+      </article>
+      <article class="timeline-card">
+        <div><div class="date">Sep 2025 – Present</div><div class="location">Toulouse, France</div></div>
+        <div>
+          <h3>SupaeroMoon</h3>
+          <div class="sub">Head of Systems Engineering</div>
+          <p>Leading systems engineering across three rover projects; defining architecture and interfaces between autonomy, structures and science subsystems and tracking mission requirements.</p>
+        </div>
+      </article>
+      <article class="timeline-card">
+        <div><div class="date">May 2023 – Aug 2023</div><div class="location">Ottawa, Canada</div></div>
+        <div>
+          <h3>BlackBerry QNX — CO-OP</h3>
+          <div class="sub">Safety Systems Software Developer</div>
+          <p>Worked on safety manuals for automotive OEM and RTOS products, automated code traceability using Python, C and JSON, and supported HARA/HAZOP assessments using TLA+ formal modelling.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">03 · Selected projects</div>
+      <h2 class="section-title">Aerospace projects</h2>
+      <p class="section-intro">Control, simulation, systems engineering, propulsion and spacecraft design.</p>
+    </div>
+    <div class="project-grid">
+      <article class="project">
+        <h3>Atmosphere-Aware RL Controller for High-Altitude Glider Flight</h3>
+        <div class="meta">MATLAB / Simulink · RL · 6DOF</div>
+        <p>Developing a 6DOF glider simulator with atmospheric turbulence models and an adaptive RL controller, benchmarked against a PID baseline.</p>
+      </article>
+      <article class="project">
+        <h3>UAV Flight Control — Adaptive Control</h3>
+        <div class="meta">PID · MRAC · Simulink · Flight Testing</div>
+        <p>Designed a cascade PID baseline and implemented a 3-axis MRAC altitude controller for a quadrotor under sudden mass drop, validated in simulation and physical flight tests.</p>
+      </article>
+      <article class="project">
+        <h3>Airbus Fly Your Ideas Challenge</h3>
+        <div class="meta">Team Leadership · Aerospace Cybersecurity</div>
+        <p>Led a multidisciplinary team to Round 2 applying post-quantum cryptography to aerospace cybersecurity, directing technical development, system design and team coordination.</p>
+      </article>
+      <article class="project">
+        <h3>Cooperative UAV Simulation & Control</h3>
+        <div class="meta">ROS · MAVROS · ArduCopter · Gazebo</div>
+        <p>Integrated and simulated a dual-drone cooperative payload system, aligning system architecture, control design and simulation.</p>
+      </article>
+      <article class="project">
+        <h3>Spacecraft Attitude Dynamics & Control</h3>
+        <div class="meta">MATLAB / Simulink · Orbit Propagation</div>
+        <p>Modelled spacecraft attitude dynamics and reaction-wheel momentum exchange with quaternion feedback control, including four perturbation torques.</p>
+      </article>
+      <article class="project">
+        <h3>Aerospace Propulsion: Reverse Engineer IAE V2500 Turbofan</h3>
+        <div class="meta">Jan 2024 – Apr 2025 · MDIDS-GT · ANSYS TurboGrid / CFX</div>
+        <p>Developed a gas turbine engine performance model using MDIDS-GT. Conducted CFD analysis of the fan stage using ANSYS TurboGrid and CFX to evaluate 3D flow behavior.</p>
+      </article>
+      <article class="project">
+        <h3>Spacecraft Payload Design: Seismometer for Europa</h3>
+        <div class="meta">Sep 2024 – Dec 2024 · Python · Instrument Validation</div>
+        <p>Designed a scientific payload concept to measure subsurface ice movement on Europa. Developed Python-based data acquisition and post-processing tools for instrument validation.</p>
+      </article>
+      <article class="project">
+        <h3>Aircraft Design: Stratospheric Launcher</h3>
+        <div class="meta">Jan 2024 – Apr 2024 · CATIA · XFLR5</div>
+        <p>Designed a high-altitude payload-dispensing aircraft based on certification and mission requirements. Created conceptual geometry and airfoils using CATIA and XFLR5.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="cv" class="cv-section">
+  <div class="container">
+    <div class="cv-box">
+      <div>
+        <div class="section-label" style="color:#9fc2da">04 · Curriculum vitae</div>
+        <h2>Download my CV</h2>
+        <p>English and French versions are available.</p>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="Anusha_Jain_CV_EN.pdf" target="_blank">English CV ↗</a>
+        <a class="btn secondary" href="Anusha_Jain_CV_FR.pdf" target="_blank">CV Français ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">05 · Contact</div>
+      <h2 class="section-title">Let's connect</h2>
+      <p class="section-intro">For internship opportunities, technical discussions or career networking.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <strong>Email</strong>
+        <a href="mailto:anusha.jain@student.isae-supaero.fr">anusha.jain@student.isae-supaero.fr</a>
+      </div>
+      <div class="contact-card">
+        <strong>LinkedIn</strong>
+        <a href="https://www.linkedin.com/in/jainanusha/" target="_blank" rel="noopener">linkedin.com/in/jainanusha ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <span>© Anusha Jain · Aerospace Engineering | Systems & Control</span>
+    <span>Toulouse, France</span>
+  </div>
+</footer>
+</body>
+</html>
